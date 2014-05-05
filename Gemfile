@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 gem 'bootstrap-sass', '~> 3.1.1.1'
-gem 'paperclip', '~> 4.1.1'
+gem 'paperclip', github: 'thoughtbot/paperclip'
 gem 'rails', '4.1.0'
 gem 'sqlite3'
 gem 'sass-rails', '~> 4.0.3'
