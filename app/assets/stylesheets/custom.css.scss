@@ -14,7 +14,7 @@ body {
   font-family: guardian-egyptt, georgia, serif;
   font-weight: 400;
   color: #d5641c;
-  font-size: 30px;
+  font-size: 35px;
 }
 
 .navbar-default .navbar-nav > li > a {
@@ -41,5 +41,16 @@ body {
   }
   p {
     font-size: 18px;
+  }
+}
+
+.caption {
+  h3 {
+    font-size: 17px;
+    margin: 2px;
+  }
+  p {
+    font-size: 15px;
+    margin: 0px;
   }
 }
