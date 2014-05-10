@@ -1,6 +1,6 @@
 app_key: "sauge6sq0xsh76w"
-app_secret: "4ix2t2g4juxeapp"
+app_secret: <%= ENV["APP_SECRET"] %>
 access_token: "4kz6uucbwsomt40e"
-access_token_secret: "2zqct7z7nblpylc"
+access_token_secret: <%= ENV["ACCESS_TOKEN_SECRET"] %>
 user_id: "217441991"
-access_type: "dropbox|app_folder"
+access_type: "app_folder"
