@@ -10,6 +10,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'paperclip-dropbox', '~> 1.2.1'
 gem "figaro"
+gem 'devise'
 
 group :production do
   gem 'pg'
