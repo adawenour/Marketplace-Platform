@@ -8,4 +8,5 @@ Implementing responsive flat design concepts using bootstraps framework.
 Accept credit card payments from buyers and initiate transfers to third-party bank accounts using stripe's API.
 Securing sensitive account data.
 Data validations, authorization and creating a variety of forms.
+Also Using dropbox's API for hosting files in production.
 
