@@ -1,3 +1,4 @@
+source 'https://code.stripe.com'
 source 'https://rubygems.org'
 gem 'bootstrap-sass', '~> 3.1.1.1'
 gem 'paperclip', github: 'thoughtbot/paperclip'
@@ -11,6 +12,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'paperclip-dropbox', '~> 1.2.1'
 gem "figaro"
 gem 'devise'
+gem 'stripe'
 
 group :production do
   gem 'pg'
