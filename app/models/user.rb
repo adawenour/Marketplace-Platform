@@ -5,9 +5,9 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
           if Rails.env.development?
-    has_attached_file :image, :styles => { :medium => "200x", :thumb => "100x100>" }, :default_url => "default.jpg"
+    has_attached_file :image, :styles => { :medium => "200x", :thumb => "100x100>" }
   else
-    has_attached_file :image, :styles => { :medium => "200x", :thumb => "100x100>" }, :default_url => "default.jpg",
+    has_attached_file :image, :styles => { :medium => "200x", :thumb => "100x100>" },
         :storage => :dropbox,
         :dropbox_credentials => Rails.root.join("config/dropbox.yml"),
         :path => ":style/:id_:filename"
