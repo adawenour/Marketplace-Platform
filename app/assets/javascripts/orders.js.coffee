@@ -1,4 +1,3 @@
-
 jQuery ->
   Stripe.setPublishableKey($('meta[name="stripe-key"]').attr('content'))
   payment.setupForm()
@@ -6,9 +5,9 @@ jQuery ->
 payment =
   setupForm: ->
     $('#new_order').submit ->
-        $('input[type=submit]').attr('disabled', true)
-        Stripe.card.createToken($('#new_order'), payment.handleStripeResponse)
-        false
+      $('input[type=submit]').attr('disabled', true)
+      Stripe.card.createToken($('#new_order'), payment.handleStripeResponse)
+      false
 
   handleStripeResponse: (status, response) ->
     if status == 200
@@ -17,3 +16,5 @@ payment =
     else
       $('#stripe_error').text(response.error.message).show()
       $('input[type=submit]').attr('disabled', false)
+
+     
