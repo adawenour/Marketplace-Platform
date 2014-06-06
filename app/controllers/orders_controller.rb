@@ -22,12 +22,12 @@ class OrdersController < ApplicationController
 
   # POST /orders
   # POST /orders.json
-  def create
+   def create
     @order = Order.new(order_params)
     @listing = Listing.find(params[:listing_id])
     @seller = @listing.user
 
-    @order.listing_id = @listing_id
+    @order.listing_id = @listing.id
     @order.buyer_id = current_user.id
     @order.seller_id = @seller.id
 
@@ -44,13 +44,13 @@ class OrdersController < ApplicationController
     rescue Stripe::CardError => e
       flash[:danger] = e.message
     end
-
+    
     respond_to do |format|
       if @order.save
         format.html { redirect_to root_url }
-        format.json { render :show, status: :created, location: @order }
+        format.json { render action: 'show', status: :created, location: @order }
       else
-        format.html { render :new }
+        format.html { render action: 'new' }
         format.json { render json: @order.errors, status: :unprocessable_entity }
       end
     end
