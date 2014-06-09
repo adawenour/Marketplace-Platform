@@ -12,3 +12,4 @@ Securing sensitive account data.
 Data validations, authorization and creating a variety of forms and lists.
 Also Using dropbox's API for hosting files in production.
 
+completed project. Online here https://etsydemo-2014.herokuapp.com/ 
