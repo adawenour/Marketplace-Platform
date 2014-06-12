@@ -26,6 +26,12 @@ class ListingsController < ApplicationController
   # GET /listings/1/edit
   def edit
   end
+  
+  #add image url in form
+  def image_remote_url=(url_value)
+    self.image = URI.parse(url_value) unless url_value.blank?
+    super
+  end
 
   # POST /listings
   # POST /listings.json
@@ -90,7 +96,7 @@ class ListingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def listing_params
-      params.require(:listing).permit(:name, :description, :price, :image)
+      params.require(:listing).permit(:name, :description, :price, :image, :image_remote_url)
     end
 
     def check_user
