@@ -8,16 +8,15 @@ class Listing < ActiveRecord::Base
         :path => ":style/:id_:filename"
   end
 
-	validates_attachment :image, :content_type => { :content_type => %w(image/jpeg image/jpg image/png) } 
- 
- 	validates :name, :description, :price, presence: true
+	  validates_attachment :image, :content_type => { :content_type => %w(image/jpeg image/jpg image/png) } 
+ 	  validates :name, :description, :price, presence: true
   	validates :price, numericality: { greater_than: 0 }
   	validates_attachment_presence :image
 
     belongs_to :user
     has_many :order
 
-    #add image url in form
+    #add image url in form and pin params in controller
   def image_remote_url=(url_value)
     self.image = URI.parse(url_value) unless url_value.blank?
     super
