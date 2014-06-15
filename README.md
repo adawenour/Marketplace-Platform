@@ -15,4 +15,4 @@ Data validations, authorization and creating a variety of forms and lists.
 Configuring dropbox's API to host files in production.
 
 ==================================================================
-completed project. Online here https://etsydemo-2014.herokuapp.com/ 
+Project online here https://etsydemo-2014.herokuapp.com/ 
